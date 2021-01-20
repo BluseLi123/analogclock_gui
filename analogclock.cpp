@@ -60,6 +60,7 @@ AnalogClock::AnalogClock(QWidget *parent)
     : QWidget(parent)
 //! [2] //! [3]
 {
+    this->setWindowFlags(Qt::FramelessWindowHint | Qt::Window);
 //! [3] //! [4]
     QTimer *timer = new QTimer(this);
 //! [4] //! [5]
