@@ -1,10 +1,11 @@
-include(../rasterwindow/rasterwindow.pri)
+QT += widgets
 
-# work-around for QTBUG-13496
-CONFIG += no_batch
+HEADERS       = analogclock.h
+SOURCES       = analogclock.cpp \
+                main.cpp
 
-SOURCES += \
-    main.cpp
+QMAKE_PROJECT_NAME = widgets_analogclock
 
-target.path = $$[QT_INSTALL_EXAMPLES]/gui/analogclock
+# install
+target.path = $$[QT_INSTALL_EXAMPLES]/widgets/widgets/analogclock
 INSTALLS += target

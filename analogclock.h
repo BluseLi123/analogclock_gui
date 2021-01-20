@@ -48,14 +48,22 @@
 **
 ****************************************************************************/
 
-#include <QApplication>
+#ifndef ANALOGCLOCK_H
+#define ANALOGCLOCK_H
 
-#include "analogclock.h"
+#include <QWidget>
 
-int main(int argc, char *argv[])
+//! [0]
+class AnalogClock : public QWidget
 {
-    QApplication app(argc, argv);
-    AnalogClock clock;
-    clock.show();
-    return app.exec();
-}
+    Q_OBJECT
+
+public:
+    AnalogClock(QWidget *parent = nullptr);
+
+protected:
+    void paintEvent(QPaintEvent *event) override;
+};
+//! [0]
+
+#endif
